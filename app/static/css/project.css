@@ -1,0 +1,70 @@
+html {
+    background-color:white;
+    
+   
+}
+
+body {
+    background-color:white;
+    
+    
+}
+h1 {
+        
+        text-align: center; 
+        color: black;
+        font-size: 80px;
+        font-style:normal;
+        
+    
+}
+h4 {
+    
+    text-align: center; 
+    color: black;
+
+
+
+}
+
+
+strong {
+    
+    font-size: 20px;
+}
+
+input {
+
+    font-size: 20px;
+
+}
+#btn{
+
+    text-align: center;
+}
+
+.file-label {
+
+    background-color: #7bb1de;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    width: 25% ;
+    height: 60% ;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .file {
+    display: none;
+  }
+
+ #backposition{
+
+    width: 500px;
+    height: 200px;
+    background-image: url("magnifier.png");
+    background-repeat: no-repeat;
+
+    background-position: 90% 0%;
+ 
+}
