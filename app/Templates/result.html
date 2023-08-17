@@ -1,13 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% load static %}
+<html>
+    <head>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Responsive Admin Dashboard | Redesign</title>
+        <link rel = "stylesheet" type = "text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class = "navigation">
+                <ul>
+                    <li>
+                        <a href = "#">
+                            <span class= "icon"><ion-icon name="megaphone-outline"></ion-icon></span>
+                            <span class="title">🔎Fraud Prediction Program</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <span class= "icon"><ion-icon name="analytics-outline"></ion-icon></span>
+                            <span class="title">시각화</span>
+                        </a>
+                    </li>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <li>
+                        <a href = "#">
+                            <span class= "icon"><ion-icon name="color-filter-outline"></ion-icon></span>
+                            <span class="title">클러스터링</span>
+                        </a>
+                    </li>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <li>
+                        <a href = "#">
+                            <span class= "icon"><ion-icon name="dice-outline"></ion-icon></span>
+                            <span class="title">확률</span>
+                        </a>
+                    </li>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <li>
+                        <a href = "#">
+                            <span class= "icon"><ion-icon name="arrow-back-circle-outline"></ion-icon></span>
+                            <span class="title">뒤로가기</span>
+                        </a>
+                    </li>
 
-<body>
+                </ul>
+            </div>
+            <!--main-->
+            <div class = "main">
+                <div class = "topbar">
+                    <div class = "toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                    <!--search-->
+                    <div class="search">
+                        <label>
+                            <input type="text" placeholder = "Search here">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+                </div>
+            </div>
 
-    결과창
 
-</body>
-</html>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+        <script>
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+
+            toggle.onclick = function(){
+                navigation.classList.toggle('active');
+                main.classList.toggle('active');
+            }
+
+            let list = document.querySelectorAll('.navigation li ')
+            function activeLink(){
+                list.forEach((item) =>
+                item.classList.remove('hovered'));
+                this.classList.add('hovered');
+            }
+            list.forEach((item) =>
+                item.addEventListener('mouseover',activeLink));
+        </script>
+    </body>
+    </html>
