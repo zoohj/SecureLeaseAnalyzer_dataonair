@@ -1,0 +1,49 @@
+#darkbutton.css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.btn {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+/* 다크 모드 스타일 */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.btn.dark-mode {
+    background-color: #444;
+    color: white;
+    border-color: #444;
+}
+.dark-mode {
+    background-color: #444; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+.dark-mode .sidebar {
+    background-color: #1f1f1f; /* Dark sidebar background color */
+}
+
+.dark-mode .navbar {
+    background-color: #1f1f1f; /* Dark navbar background color */
+    color: white;
+}
+.dark-mode {
+    background-color: #1c1c1c;
+    color: white; /* Default text color for dark mode */
+}
+
+.dark-mode .top-text strong span#value {
+    color: limegreen; /* Change the color of the value in the top-text */
+}

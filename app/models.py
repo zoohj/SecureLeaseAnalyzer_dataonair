@@ -9,4 +9,4 @@ def upload_to(instance, filename):
 
 class FileUpload(models.Model):
     apt_name = models.CharField(max_length=20)
-    docfile = models.FileField(upload_to='uploads/')  # uploads/ 폴더에 저장
+    docfile = models.FileField(upload_to='uploads/')  # media/uploads/ 폴더에 저장

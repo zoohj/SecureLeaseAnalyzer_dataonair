@@ -1,0 +1,124 @@
+#cluster.css
+
+.content-section {
+    display: flex;
+}
+
+.left-content {
+    flex: 1.8; /* 왼쪽 영역이 더 넓음 */
+    padding: 30px;
+    border: 1px solid #ddd;
+    position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+
+}
+
+
+.nested-box2 {
+    width: 44.5%; /* 또 다른 네모의 너비 설정 */
+    height: 300px; /* 또 다른 네모의 높이 설정 */
+    background-color: #ECF8E0;
+    position: absolute;
+    top: 33.3%; /* 부모 요소 중앙에 위치하기 위한 설정 */
+    left: 77.8%; /* 부모 요소 중앙에 위치하기 위한 설정 */
+    transform: translate(-50%, -50%); /* 중앙 위치 조정 */
+}
+
+.nested-box {
+    width: 44.5%; /* 또 다른 네모의 너비 설정 */
+    height: 650px; /* 또 다른 네모의 높이 설정 */
+    background-color: #F6E3CE;
+    position: absolute;
+    top: 70%; /* 부모 요소 중앙에 위치하기 위한 설정 */
+    left: 77.8%; /* 부모 요소 중앙에 위치하기 위한 설정 */
+    transform: translate(-50%, -50%); /* 중앙 위치 조정 */
+}
+.text-content {
+    display: inline-block;
+    position: relative;
+}
+
+.answer-content {
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 800px;
+    padding: 15px;
+}
+
+.animated-text {
+    display: grid;
+    overflow: hidden;
+    white-space: pre-line;
+    font-size: 18px;
+}
+
+.automatic-line-break {
+    white-space: pre-line;
+}
+
+.image1-container {
+    width: 500px;
+    display: flex;
+    text-align: center;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 190px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.img1-title{
+    margin-bottom: 200px; 
+    margin-left: 196px;
+}
+.nested-image {
+    max-width: 400%;
+    max-height: 300%;
+    border: 1px solid #ddd;
+    display: flex;
+}
+
+.image1-wrap {
+margin-top: -50px; /* Add spacing between image and description */
+margin-bottom: 10px; /* Add spacing between image and description */
+margin-left: 40px; /* Add spacing between image and description */
+
+}
+.img1-detail {
+font-size: 14px;
+color: #555;
+text-align: center;
+}
+
+.que-profile {
+    top: 20px;
+    left: 5px;
+    height: 80px;
+    width: 100px;
+    padding: 20px;
+    margin-left: -4px;
+}
+
+.text_detail1 {
+    flex: 1;
+    height: 280px;
+    background-color: #ECF8E0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    margin-left: -150px;
+}
+.text_detail2 {
+flex: 1; /* Take the remaining space */
+width: 60%; /* 또 다른 네모의 너비 설정 */
+height: 300px; /* 또 다른 네모의 높이 설정 */
+background-color: #F6E3CE;
+position: absolute;
+top: 150%; /* 부모 요소 중앙에 위치하기 위한 설정 */
+left: 50%; /* 부모 요소 중앙에 위치하기 위한 설정 */
+transform: translate(-50%, -50%); /* 중앙 위치 조정 */
+}

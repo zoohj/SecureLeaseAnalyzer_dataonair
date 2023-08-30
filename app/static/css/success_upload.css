@@ -1,0 +1,247 @@
+#success_upload.css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.sidebar {
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    --primary-text-color: rgba(0,0,0,.75);
+    color : var(--primary-text-color);
+}
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 80%;
+    list-style: none;
+    padding: 0;
+    margin: 34px 0;
+}
+
+.sidebar > ul > li {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.3s ease;
+    padding: 20px 0; /* 여백을 더 작게 조정 */
+    margin: 0px 0;
+}
+.sidebar > ul > li:hover {
+    background-color: rgba(0,0,0,.1);
+
+}
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, .7);
+    font-size: 25px;
+    text-decoration: none;
+}
+.icon {
+    font-size: 40px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    margin: -12px; /* 여백 조정 */
+}
+.top-text {
+    text-align: left;
+    font-size: 25px;
+    margin-top: 100px;
+    margin-left: 100px;
+    transition: opacity 0.3s;
+    opacity: 1;g
+    letter-spacing: 0.15em;
+}
+.hide-text{
+    opacity: 0;
+}
+.image-container {
+    width: 160%; /* 이미지의 부모 요소인 .image-container를 100% 너비로 설정 */
+    max-width: 500px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬을 위한 마진 설정 */
+    display: flex;
+}
+
+.image-container img {
+    width: 150%;
+    max-height: 800px; /* 최대 높이 설정 */
+    height: auto; /* 자동으로 높이 조절 */
+    display: flex;
+}
+
+.top-text {
+    text-align: left;
+    font-size: 35px;
+    margin-top: 30px; /* 여백 조정 */
+    margin-left: 100px; /* 여백 조정 */
+    transition: opacity 0.3s;
+    opacity: 1;
+    letter-spacing: 0.15em;
+}
+.sidebar__item a {
+    display: flex;
+    align-items: center;
+}
+.sidebar__item .icon {
+    margin-right: -10px;
+}
+.sidebar__item .title {
+    margin-left: 10px; /* 오른쪽으로 조금 이동 */
+}
+header {
+    padding: 45px 0; /* 위아래 여백 설정 */
+    text-align: center; /* 내용 가운데 정렬 */
+    --primary-text-color: rgba(0,0,0,.75);
+    color : var(--primary-text-color);
+}
+
+/* 네비게이션 스타일링 */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* 메뉴 항목을 가로로 정렬 */
+    margin-right: 15px; /* 메뉴 항목 간격 */
+}
+
+nav ul li a {
+    text-decoration: none;
+    --primary-text-color: rgba(0,0,0,.75);
+    color : var(--primary-text-color);
+    font-weight: bold;
+}
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: white;
+}.navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0rem;
+    --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+    --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+    --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+    --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+    flex-wrap: wrap;
+}
+element.style {
+    margin-right: 0;
+}
+.btn-outline-dark {
+    --bs-btn-color: #212529;
+    --bs-btn-border-color: #212529;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #212529;
+    --bs-btn-hover-border-color: #212529;
+    --bs-btn-focus-shadow-rgb: 33,37,41;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #212529;
+    --bs-btn-active-border-color: #212529;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #212529;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #212529;
+    --bs-gradient: none;
+}
+.image-container-row {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-container {
+    width: 20%;
+    height: 200px;
+    margin-right: 0;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.image-container.blur img {
+    filter: blur(2.5px); /* 블러 처리 효과 */
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* 컨테이너 스타일 */
+.container {
+    max-width: 500px; /* 가로 최대 크기 조절 */
+    margin: 0 auto; /* 중앙 정렬 */
+    margin-right: 0; /* 오른쪽 여백 없애기 */
+    /* 추가적인 스타일 적용 */
+    margin-top: -250px;
+    margin-left: 500px;
+}
+
+
+
+.dark-mode .navbar {
+    background-color: #1f1f1f; /* Dark navbar background color */
+    color: white;
+}
+.dark-mode {
+    background-color: #1c1c1c;
+    color: white; /* Default text color for dark mode */
+}
+
+.dark-mode .top-text strong span#value {
+    color: limegreen; /* Change the color of the value in the top-text */
+}

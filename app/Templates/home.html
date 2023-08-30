@@ -1,78 +1,108 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="kr">
+<html lang="ko">
 
 <head>
-  <link href ="{% static 'css/bootstrap.css'%}" rel = "stylesheet" /> 
-  <link href ="{% static 'css/project.css'%}" rel = "stylesheet" />
-    <link 
-    rel = "shortcut icon" 
-    sizes = "16x16 32x32 64x64" 
-    href ="data:image/png;base64,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" />
-    <title>전세사기 검사하기</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/project.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">s
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <title>전세사기 검사하기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <style>
+  *{
+    font-family: 'Gowun Dodum', sans-serif;    }
+</style>
 </head>
 
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="{% static 'images/apartment.png' %}" alt="Apartment" width="30" height="24">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">전세사기 검사하기</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <header class="text-center py-5">
-        <h1 class="display-4 fw-bold">Fraud Prediction</h1>
-        <h1 class="display-4 fw-bold">Program</h1>
-    </header>
-    <br>
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form method="POST" enctype="multipart/form-data" action="{% url 'result' %}">
-                    {% csrf_token %}
-                    <div class="mb-3">
-                        <label for="aptName" class="form-label">아파트명을 입력해주세요:</label>
-                        <input required type="text" class="form-control" id="aptName" name="apt_name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="chooseFile" class="form-label">등기부등본을 선택해주세요:</label>
-                        <input type="file" class="form-control" id="chooseFile" accept="image/*,.pdf/" name="docfile">
-                    </div>
-                    <button type="submit" class="btn btn-primary col-12">제출</button>
-                </form>
-            </div>
-        </div>
+  <div class="bg-wrapper">
+    <div class="bg-container container-fluid">
+      <div class="bg-static"></div>
+      <div class="bg-static bg-move"></div>
+      <div class="title-content">
+        <h1>전세사기 이상감지<br>분석리포트</h1>
+        <p>
+          <button id="title-button" class="btn">검사하기</button>
+        </p>
+      </div>
     </div>
+    <div class="content-wrapper">
+      <main class="container content">
+        <!-- <form method="POST" action="{% url 'success_upload' %}"> -->
+        <form method="POST" enctype="multipart/form-data" > 
+          {% csrf_token %}
+          <div class="mb-3">
+            <label class="form-label">아파트명을 입력해주세요</label>
+            <p></p>
+            <div class="input-group">
+              <span class="input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                  viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M0 48C0 21.5 21.5 0 48 0H336c26.5 0 48 21.5 48 48V207l-42.4 17H304 272c-8.8 0-16 7.2-16 16v32 24.2V304c0 .9 .1 1.7 .2 2.6c2.3 58.1 24.1 144.8 98.7 201.5c-5.8 2.5-12.2 3.9-18.9 3.9H240V432c0-26.5-21.5-48-48-48s-48 21.5-48 48v80H48c-26.5 0-48-21.5-48-48V48zM80 224c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H80zm80 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zM64 112v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zM176 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H176zm80 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H272c-8.8 0-16 7.2-16 16zM423.1 225.7c5.7-2.3 12.1-2.3 17.8 0l120 48C570 277.4 576 286.2 576 296c0 63.3-25.9 168.8-134.8 214.2c-5.9 2.5-12.6 2.5-18.5 0C313.9 464.8 288 359.3 288 296c0-9.8 6-18.6 15.1-22.3l120-48zM527.4 312L432 273.8V461.7c68.2-33 91.5-99 95.4-149.7z" />
+                </svg>
+              </span>
+              <input name="apt_name" type="text" class="form-control" placeholder="아파트명">
+            </div>
+          </div>
 
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+          <hr>
+
+          <div class="mb-3">
+            <label class="form-label">등기부등본 업로드</label>
+            <p></p>
+            <div class="input-group">
+              <input name="docfile" type="file" class="form-control" accept="application/pdf, image/*" placeholder="파일 선택" />
+            </div>
+          </div>
+
+          <hr>
+
+          <p class="text-center">
+            <button class="btn btn-primary col-5 d-inline-block" type="submit">제출</button>
+          </p>
+        </form>
+      </main>
+      <footer>
+        <div class="footer-content"></div>
+        <p>
+          © 데청캠 2분반 4조
+          <br>
+          <br>
+          by
+          <a href="mailto:kosukhun0@gmail.com"><i>고석훈</i></a>
+          and
+          <a href="mailto:qewqwer124@gmail.com"><i>김도윤</i></a>
+          and
+          <a href="mailto:seoyoung01045@naver.com"><i>김서영</i></a>
+          and
+          <a href="mailto:songsoohyun4781@gmail.com"><i>송수현</i></a>
+          and
+          <a href="mailto:awnstjr07@gmail.com"><i>양준석</i></a>
+          and
+          <a href="mailto:shstarsh21@gmail.com"><i>이수현</i></a>
+          and
+          <a href="mailto:xoxo0675@gmail.com"><i>주현지</i></a>
+          <br>
+          <br>
+          Proudly created with Vanilla HTML5, CSS, Javascript.
+        </p>
+      </footer>
+    </div>
+  </div>
+  <script src="{% static 'js/home.js' %}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
-

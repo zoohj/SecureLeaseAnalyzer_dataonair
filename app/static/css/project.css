@@ -5,15 +5,13 @@ html {
 }
 
 body {
-    background-color:white;
-    
-    
-}
+    background-color: rgba(0, 0, 0, 0.2); /* 배경 색을 어둡게, 투명도 설정 */
+  }
 h1 {
         
         text-align: center; 
         color: black;
-        font-size: 80px;
+        font-size: 40px;
         font-style:normal;
         
     

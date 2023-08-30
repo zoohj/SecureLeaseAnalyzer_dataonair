@@ -14,16 +14,20 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from django.conf.urls.static import static
 from django.conf import settings
-from app.views import file_upload, result  # Import the view function
+from app.views import file_upload, success_upload, test # Import the view function
+from app import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('fileupload/', file_upload, name="fileupload"),  
-    path('result/', result, name='result'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('fileupload/', file_upload, name="file_upload"), # 등본파일 업로드
+    path('success_upload/', success_upload, name='success_upload'), # 결과
+    path('test/', test, name='test'), # 결과
 
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -14,6 +14,8 @@ from pathlib import Path
 
 import os
 
+from django.conf import settings
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,6 +30,14 @@ SECRET_KEY = 'django-insecure-c^6h3o*5cx2@&_zvoma4*09%%*(u*ydd)n5@+&mpz!_sd4d=@x
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+#csv_file
+
+csv_file_path = os.path.join(settings.BASE_DIR, 'app', 'testdata.csv')
+
+
+
+
 
 
 # Application definition
@@ -57,6 +67,7 @@ ROOT_URLCONF = 'config.urls'
 
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 MEDIA_URL='/media/'
+
 
 TEMPLATES = [
     {
@@ -123,7 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS= [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS= [os.path.join(BASE_DIR, 'app/static'),]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

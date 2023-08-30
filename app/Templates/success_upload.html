@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/success_upload.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/darkbutton.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cluster.css'%}">
+
+</head>
+<body>
+
+<div class="sidebar">
+    <div style="display: flex; justify-content: center; margin-top: 30px;">
+        <img src="{% static 'images/logo.png'%}" alt="Logo" class="d-inline-block align-text-top" width="230" height="90">
+    </div>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+          </a>
+        </div>
+      </nav>
+    <ul>
+        <li class="sidebar__item">
+            <a href="#" id="probability-button" type="button" style="display: flex; align-items: center;">
+                <span class="icon"><ion-icon name="dice-outline"></ion-icon></span>
+                <span class="title">확률</span>
+            </a>
+        </li>
+        <li class="sidebar__item">
+            <a href="#" id="clustering-button" type="button" style="display: flex; align-items: center;">
+                <span class="icon"><ion-icon name="color-filter-outline"></ion-icon></span>
+                <span class="title">클러스터링</span>
+            </a>
+        </li>
+    <li class="sidebar__item">
+        <a href="#" id="mypage-button" type="button" style="display: flex; align-items: center;">
+            <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+            <span class="title">마이페이지</span>
+        </a>
+    </li>
+</ul>
+</div>
+<header style="display: flex; justify-content: flex-end; padding-top:50px;">
+    <nav>
+        <button id="theme-toggle" type="button" class="btn btn-outline-dark" style="margin-right: 20px; font-size: 18px; padding: 10px 20px;"><ion-icon name="moon-outline"></ion-icon></button>
+        <button type="button" class="btn btn-outline-dark" style="margin-right: 35px; font-size: 18px; padding: 10px 20px;">sign in</button>
+    </nav>
+</header>
+<div id="probability-content" style="display: none;">
+<main style="padding: 40px;"> <!-- 메인 내용을 감싸는 요소 -->
+    <div class="top-text" style="text-align: right; margin-right: 960px; margin-top: 70px;">
+        <p><strong>전세사기 확률은 <span id="value" style="color: green;">{{percent}}</span> 입니다<strong></p>
+    </div>
+    <br>
+    <div class="image-container-row" style="display: flex; align-items: center; margin-right: 1150px;">
+        <div class="image-container" style="width: 35%; height: 200px; margin-right: 20px;">
+            <img src="{% static 'images/안전.png' %}" alt="Image" width="100%" height="100%">
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="image-container-row" style="display: flex; align-items: center; margin-right: 1000px; margin-top: 20px;">
+        <div class="image-container blur" style="width: 15%; height: 100px; margin-left: 300px; margin-bottom: 10px;">
+            <img src="{% static 'images/안전.png' %}" alt="Image" width="100%" height="100%">
+            <div class="image-text" style="color: blue; background-color: transparent;">안전</div>
+        </div>
+        <div class="image-container blur" style="width: 15%; height: 100px; margin-right: 0px; margin-bottom: 10px;">
+            <img src="{% static 'images/의심.png' %}" alt="Image" width="100%" height="100%">
+            <div class="image-text" style="color: green; background-color: transparent;">의심</div>
+        </div>
+        <div class="image-container blur" style="width: 15%; height: 100px; margin-right: 0px; margin-bottom: 10px;">
+            <img src="{% static 'images/위험.png' %}" alt="Image" width="100%" height="100%">
+            <div class="image-text" style="color: orange; background-color: transparent;">위험</div>
+        </div>
+        <div class="image-container blur" style="width: 15%; height: 100px;margin-right: 0px; margin-bottom: 10px;">
+            <img src="{% static 'images/매우 위험.png' %}" alt="Image" width="100%" height="100%">
+            <div class="image-text" style="color: red; background-color: transparent;">매우 위험</div>
+        </div>
+    </div>
+
+    <div class="container text-center" style="margin-right: 0px;" >
+        <div class="row align-items-center justify-content-end">
+            <div class="col">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col ml-auto">
+                            <a href="https://www.chosun.com/economy/real_estate/2023/08/01/CBSOWTOAHNE4BMP7EJDS54GU5Y/
+                            "><img src="{% static 'images/뉴스1.png'%}"alt="전세보증보험 이미지" style="width: 800px; height: 150px;margin-top: -80px;"></a>
+                            <a href="https://daily.hankooki.com/news/articleView.html?idxno=983661
+
+                            "><img src="{% static 'images/뉴스2.png'%}"alt="자극적" style="width: 800px; height: 150px;margin-top: 70px;"></a>
+                            <a href="https://biz.newdaily.co.kr/site/data/html/2023/05/10/2023051000046.html
+                            "><img src="{% static 'images/뉴스3.png'%}"alt="보증보험 문턱 이미지" style="width: 800px; height: 150px;margin-top: 90px;"></a>
+                        </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="clustering-content" style="display: none;">
+    <section class="content-section">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 text-center" style="margin-left: 300px;">
+                <div class="image1-container">
+                    <h2 class="img1-title" style="font-size: 28px;"><strong>클러스터링 결과</strong></h2>
+                    <div class="image1-wrap" style="margin-top: -150px;">
+                        <img src="../../media/results/3Dresult.png" alt="CLUSTERING RESULT IMAGE" class="nested-image">
+                    </div>
+                    <div class="img1-detail" style="display:center;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="right-content">
+                <div class="nested-box2">
+                        <div class="question-content">
+                            <div class="que-profile"style="margin-bottom: 30px;">
+                                <img src="{% static 'images/que_profile.png'%}" alt="que_profile" class="profile", width="85", height="85">
+                            </div>
+                            <div class="text_detail1">
+                                <strong>내 등본 특징을 알고싶어</strong>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="nested-box" >
+                    <div class="answer-content">
+                        <div class="ans-profile">
+                            <img src="{% static 'images/ans_profile.png'%}" alt="ans_profile" class="profile" width="85" height="85">
+                        </div>
+                        <div class="text_detail2 text-center" >
+                            <div class="animated-text" id="text-content">
+                                <p class="automatic-line-break">
+                                    <strong> 라벨 0 특징 </strong>
+                                </p>
+                                <div style="text-align: left;">
+                                <p class="automatic-line-break" >
+                                    1. 전세가율이 높은 편에 속합니다.<br>
+                                    2. 평균치에 비해 대체로 최근에 시공된 건물이 많습니다.<br>
+                                    3. 대체로 근저당이 없거나 적게 설정되어 있습니다.<br>
+                                    4. 압류가 설정된 부동산 매물이 많습니다. 압류가 설정된 매물의 대부분은 전세가율이 높으며 최근에 시공되었습니다.<br>
+                                    5. 대부분의 부동산 매물에 가압류가 설정되어 있습니다. 가압류가 설정된 매물의 대부분은 전세가율이 평균보다 높으며, 최근에 시공되었습니다.<br>
+                                    6. 임차권등기명령 기록이 있는 매물이 많았습니다. 그 중 대부분은 전세가율이 평균보다 높았습니다.<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+</body>
+</html>
+
+</main>
+<script>
+
+    function changeTextColor(valueElement, value) {
+        const color = value <= 30 ? 'blue' : value <= 50 ? 'green' : value <= 70 ? 'orange' : 'red';
+        valueElement.style.color = color;
+    }
+
+    const valueElement = document.getElementById('value');
+    const initialValue = parseInt(valueElement.innerText);
+    changeTextColor(valueElement, initialValue);
+
+
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+    });
+
+    const probabilityButton = document.getElementById("probability-button");
+    const clusteringButton = document.getElementById("clustering-button");
+    const mypageButton = document.getElementById("mypage-button");
+    const probabilityContent = document.getElementById("probability-content");
+    const clusteringContent = document.getElementById("clustering-content");
+    const mypageContent = document.getElementById("mypage-content");
+
+    probabilityButton.addEventListener("click", () => {
+        probabilityContent.style.display = probabilityContent.style.display === "none" ? "block" : "none";
+        clusteringContent.style.display = "none";
+        mypageContent.style.display = "none";
+    });
+
+    clusteringButton.addEventListener("click", () => {
+        probabilityContent.style.display = "none";
+        clusteringContent.style.display = clusteringContent.style.display === "none" ? "block" : "none";
+        mypageContent.style.display = "none";
+    });
+
+    mypageButton.addEventListener("click", () => {
+        probabilityContent.style.display = "none";
+        clusteringContent.style.display = "none";
+        mypageContent.style.display = mypageContent.style.display === "none" ? "block" : "none";
+    });
+
+    const textElement = document.getElementById('text-content');
+    const text = textElement.innerHTML; // innerHTML 사용
+    textElement.innerHTML = '';
+
+    function animateText(index) {
+        if (index <= text.length) {
+            textElement.innerHTML = text.substring(0, index);
+            index++;
+            setTimeout(() => {
+                animateText(index);
+            }, 20); // Adjust the speed here (milliseconds)
+        }
+    }
+
+    animateText(0);
+
+</script>
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="{% static 'js/justgage.js'%}" />
+<script src="{% static 'js/darkbutton.js'%}" />
+
+</body>
+</html>
