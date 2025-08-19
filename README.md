@@ -114,15 +114,16 @@ pip install selenium --upgrade
 
    **3-4-1.**  
    
-   
-   <img width="482" alt="image" src="https://github.com/novsh21/datacampus2023/assets/143332439/1e6be98f-6ad1-436f-8f19-3c1c45b20094">
+   <img width="482" height="115" alt="1" src="https://github.com/user-attachments/assets/c7844da5-5d52-4721-ba24-c284a393b535" />
+
+
    
   fraud 데이터를 불러오는 곳에 '전세사기raw데이터' 엑셀파일 경로를 넣습니다.
 
   **3-4-2.**
   
-   
-   <img width="465" alt="image" src="https://github.com/novsh21/datacampus2023/assets/143332439/c21cd9e7-62d3-4f8f-a353-4c1cd67029b6">
+  <img width="465" height="119" alt="2" src="https://github.com/user-attachments/assets/934f7cda-17ef-4b49-b1f9-4ba30e392bb5" />
+
    
    nfraud 데이터를 불러오는 곳에 '전세사기아닌raw데이터' 엑셀파일 경로를 넣습니다.
 
@@ -134,7 +135,7 @@ pip install selenium --upgrade
 
    **3-4-3.** 
    
-   <img width="546" alt="image" src="https://github.com/novsh21/datacampus2023/assets/143332439/14c083d0-a1ae-4799-ad19-cdedccd855d0">
+   <img width="546" height="71" alt="3" src="https://github.com/user-attachments/assets/29a1a4dd-7ec0-4741-bc48-737985af33f6" />
 
    위의 사진 부분에 **'0822data.csv'** 파일 주소를 넣습니다.
    
@@ -143,9 +144,10 @@ pip install selenium --upgrade
    
    크롤링 부분 코드를 돌린 후, 아래와 같은 입력란이 생기면 **'서희스타힐스아파트'** 라고 쳐야 합니다.
 
-<img width="532" alt="image" src="https://github.com/novsh21/datacampus2023/assets/143332439/b623ccb7-1dd4-4886-a035-2c4a6b190063">
+<img width="532" height="43" alt="4" src="https://github.com/user-attachments/assets/66b5ba45-2ee9-4701-b666-f4219551b40a" />
 
    
+
    
    **3-4-4.** 다운 받은 **완료데이터.csv**파일을 3-4-1과 3-4-2 방법처럼 큰따옴표 사이에 경로주소를 넣습니다.
    
@@ -162,14 +164,19 @@ pip install selenium --upgrade
 
 ## 4. 프로젝트 시현
 
-<img width="1266" alt="KakaoTalk_20230829_145441591" src="https://github.com/novsh21/datacampus2023/assets/143332439/ff458763-1b60-4b58-8fb1-cbb87763f591">
+<img width="1266" height="703" alt="5" src="https://github.com/user-attachments/assets/c5491dc7-4c1b-4969-9fd1-6f09fae48e43" />
 
 
-<img width="1266" alt="KakaoTalk_20230829_145525131" src="https://github.com/novsh21/datacampus2023/assets/143332439/f765ba3c-407b-41c9-b9d5-b6f0f902e071">
 
-![KakaoTalk_20230829_145433662](https://github.com/novsh21/datacampus2023/assets/143332439/f956eb46-c1ed-4df5-9730-75bbd91b288b)
 
-![KakaoTalk_20230829_145512677](https://github.com/novsh21/datacampus2023/assets/143332439/62b3dc16-bcb6-4ec2-b890-baf8310b15e7)
+<img width="1266" height="701" alt="8" src="https://github.com/user-attachments/assets/8075d7ee-e5a9-4218-b863-43037e0328d0" />
+
+
+<img width="959" height="440" alt="6" src="https://github.com/user-attachments/assets/ab6bbdf8-4bf6-4569-8016-509ae69a1453" />
+
+
+<img width="949" height="430" alt="7" src="https://github.com/user-attachments/assets/aed8f93f-8b65-46a0-b73d-de5b3dabe73f" />
+
 
 
 ## 5. 팀원명 및 팀원이름
